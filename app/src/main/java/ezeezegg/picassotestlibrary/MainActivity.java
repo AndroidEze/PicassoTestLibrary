@@ -12,6 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ImageView picassoImage = (ImageView) findViewById(R.id.picassoImage);
+        Picasso.with(this).load("https://scontent-gru2-1.xx.fbcdn.net/t31.0-8/13403361_595551497292631_2381954757948098066_o.jpg").into(picassoImage);
     }
 
     @Override
